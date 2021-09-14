@@ -1,6 +1,8 @@
 /*************************************\
         $LABELS
 \*************************************/
-.label{
-    color: rgba(0,0, 0, .7);
+.label {
+  display: block;
+  @include font-size(12px);
+  color: rgba(0, 0, 0, 0.7);
 }

@@ -1,0 +1,19 @@
+/*************************************\
+        $BUTTONS
+\*************************************/
+%buttons{
+    padding: 4px;
+    border: none;
+    font-weight: 700;
+    border-radius: 4px;
+}
+.button--dark{
+    background-color: $color-dark-background;
+    color: $color-lite-grayish-cyan-transparent;
+    @extend %buttons;
+}
+.button--custom{
+    @extend %buttons;
+    color: rgba($color-dark-grayish-cyan, 1);
+    background-color: $color-lite-grayish-cyan-transparent;
+}

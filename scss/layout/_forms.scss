@@ -9,6 +9,12 @@
         max-width: 550px;
         width: 70%;
         min-width: 300px;
-        padding: 20px;
+        padding: 24px 30px;
         border-radius: 14px;
+        &__container-button{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin: 10px 0 24px;
+        }
 }

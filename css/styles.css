@@ -2,6 +2,12 @@
         $VARIABLES
 \*************************************/
 /*************************************\
+        $FUNCTIONS
+\*************************************/
+/*************************************\
+        $MIXINS
+\*************************************/
+/*************************************\
         $RESETS
 \*************************************/
 html {
@@ -16,6 +22,10 @@ html {
           box-sizing: inherit;
   padding: 0;
   margin: 0;
+}
+
+body {
+  font-family: "Space Mono", monospace;
 }
 
 h1,
@@ -58,13 +68,97 @@ h5 {
   max-width: 550px;
   width: 70%;
   min-width: 300px;
-  padding: 20px;
+  padding: 24px 30px;
   border-radius: 14px;
+}
+.form-calculator__container-button {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 10px 1fr 10px 1fr;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 10px 0 24px;
+}
+
+/*************************************\
+        $BUTTONS
+\*************************************/
+.button--custom, .button--dark {
+  padding: 4px;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+}
+
+.button--dark {
+  background-color: #00474b;
+  color: #f4fafa;
+}
+
+.button--custom {
+  color: #7f9c9f;
+  background-color: #f4fafa;
+}
+
+/*************************************\
+        $INPUT
+\*************************************/
+.input--time, .input--loan {
+  width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  background-color: #f4fafa;
+  outline: none;
+}
+.input--time::-webkit-input-placeholder, .input--loan::-webkit-input-placeholder {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: rgba(127, 156, 159, 0.7);
+}
+.input--time::-moz-placeholder, .input--loan::-moz-placeholder {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: rgba(127, 156, 159, 0.7);
+}
+.input--time:-ms-input-placeholder, .input--loan:-ms-input-placeholder {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: rgba(127, 156, 159, 0.7);
+}
+.input--time::-ms-input-placeholder, .input--loan::-ms-input-placeholder {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: rgba(127, 156, 159, 0.7);
+}
+.input--time::placeholder, .input--loan::placeholder {
+  text-align: right;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  color: rgba(127, 156, 159, 0.7);
+}
+.input--time::before, .input--loan::before {
+  content: "./../assets/icon/icon-dollar.svg";
+  display: block;
+  position: absolute;
+  color: rgba(127, 156, 159, 0.7);
+}
+
+.input--loan {
+  margin-bottom: 20px;
 }
 
 /*************************************\
         $LABELS
 \*************************************/
 .label {
+  display: block;
+  font-size: 0.75rem;
+  line-height: 1.125rem;
   color: rgba(0, 0, 0, 0.7);
 }
