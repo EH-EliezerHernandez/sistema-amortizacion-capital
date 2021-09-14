@@ -20,6 +20,8 @@
     background-color: $color-lite-grayish-cyan-transparent;
 }
 .button--reset{
+    width: 100%;
+    margin-top: 20px;
     @extend %buttons;
     @include font-size(14px);
     color: rgba($color-dark-background,.4);

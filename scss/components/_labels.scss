@@ -12,5 +12,7 @@
 }
 .label--result{
   @extend %label;
+  text-align: center;
+  white-space: nowrap;
   color: $color-lite-grayish-cyan-transparent;
 }

@@ -1,6 +1,7 @@
 .result-number{
     font-weight: 700;
-    @include font-size(32px);
+    @include font-size(16px);
+    text-align: center;
     color: $color-dark-grayish-cyan;
     color: rgb(43 179 165);
 }

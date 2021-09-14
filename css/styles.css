@@ -71,7 +71,9 @@ h5 {
      -moz-column-gap: 20px;
           column-gap: 20px;
   background-color: white;
-  max-width: 650px;
+  max-width: -webkit-max-content;
+  max-width: -moz-max-content;
+  max-width: max-content;
   width: 70%;
   min-width: 300px;
   margin-top: 50px;
@@ -93,16 +95,6 @@ h5 {
   margin: 10px 0 24px;
 }
 .form-calculator__container-result {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 24px;
   background-color: #00474b;
   border-radius: 10px;
@@ -110,8 +102,8 @@ h5 {
 .form-calculator__result {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 10px auto;
-  grid-template-columns: repeat(2, auto);
+  -ms-grid-columns: auto 10px auto 10px auto 10px auto 10px auto;
+  grid-template-columns: repeat(5, auto);
   -webkit-column-gap: 10px;
      -moz-column-gap: 10px;
           column-gap: 10px;
@@ -146,6 +138,8 @@ h5 {
 }
 
 .button--reset {
+  width: 100%;
+  margin-top: 20px;
   font-size: 0.875rem;
   line-height: 1.3125rem;
   color: rgba(0, 71, 75, 0.4);
@@ -216,13 +210,16 @@ h5 {
 }
 
 .label--result {
+  text-align: center;
+  white-space: nowrap;
   color: #f4fafa;
 }
 
 .result-number {
   font-weight: 700;
-  font-size: 2rem;
-  line-height: 3rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  text-align: center;
   color: #7f9c9f;
   color: #2bb3a5;
 }
