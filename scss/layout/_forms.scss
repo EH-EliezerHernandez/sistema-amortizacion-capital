@@ -3,7 +3,6 @@
 \*************************************/
 .form-calculator{
         display: grid;
-        grid-template-columns: repeat(2,1fr);
         column-gap: 20px;
         background-color: $color-white;
         max-width: 650px;
@@ -12,6 +11,10 @@
         margin-top: 50px;
         padding: 24px 30px;
         border-radius: 14px;
+        &__container-capture{
+                display: grid;
+                grid-template-columns: 1fr;
+        }
         &__container-button{
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);

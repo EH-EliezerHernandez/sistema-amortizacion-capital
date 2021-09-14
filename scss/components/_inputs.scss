@@ -3,6 +3,7 @@
 \*************************************/
 %input {
     width: 100%;
+    margin-bottom: 20px;
   padding: 5px;
   border: none;
   border-radius: 2px;
@@ -25,7 +26,6 @@
 
 .input--loan{
     @extend %input;
-    margin-bottom: 20px;
 }
 
 .input--time{

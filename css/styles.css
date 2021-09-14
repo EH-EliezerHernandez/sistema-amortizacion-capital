@@ -67,8 +67,6 @@ h5 {
 .form-calculator {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
-  grid-template-columns: repeat(2, 1fr);
   -webkit-column-gap: 20px;
      -moz-column-gap: 20px;
           column-gap: 20px;
@@ -79,6 +77,12 @@ h5 {
   margin-top: 50px;
   padding: 24px 30px;
   border-radius: 14px;
+}
+.form-calculator__container-capture {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+  grid-template-columns: 1fr;
 }
 .form-calculator__container-button {
   display: -ms-grid;
@@ -155,6 +159,7 @@ h5 {
 \*************************************/
 .input--time, .input--loan {
   width: 100%;
+  margin-bottom: 20px;
   padding: 5px;
   border: none;
   border-radius: 2px;
@@ -197,10 +202,6 @@ h5 {
   display: block;
   position: absolute;
   color: rgba(127, 156, 159, 0.7);
-}
-
-.input--loan {
-  margin-bottom: 20px;
 }
 
 /*************************************\
