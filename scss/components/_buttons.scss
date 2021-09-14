@@ -9,11 +9,21 @@
 }
 .button--dark{
     background-color: $color-dark-background;
-    color: $color-lite-grayish-cyan-transparent;
+    color: rgba($color-lite-grayish-cyan-transparent,.9);
+    cursor: pointer;
     @extend %buttons;
 }
 .button--custom{
     @extend %buttons;
+    cursor: pointer;
     color: rgba($color-dark-grayish-cyan, 1);
     background-color: $color-lite-grayish-cyan-transparent;
+}
+.button--reset{
+    @extend %buttons;
+    @include font-size(14px);
+    color: rgba($color-dark-background,.4);
+    text-transform: uppercase;
+    background-color: rgba($color-dark-grayish-cyan,0.4);
+    cursor: not-allowed;
 }
