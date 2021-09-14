@@ -1,0 +1,7 @@
+/*************************************\
+        $MIXINS
+\*************************************/
+@mixin font-size($size-px){
+    font-size: calcularRem($size-px);
+    line-height: calcularRem($size-px) * 1.5;
+}

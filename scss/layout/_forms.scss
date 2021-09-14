@@ -6,9 +6,31 @@
         grid-template-columns: repeat(2,1fr);
         column-gap: 20px;
         background-color: $color-white;
-        max-width: 550px;
+        max-width: 650px;
         width: 70%;
         min-width: 300px;
-        padding: 20px;
+        margin-top: 50px;
+        padding: 24px 30px;
         border-radius: 14px;
+        &__container-button{
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+                gap: 10px;
+                margin: 10px 0 24px;
+        }
+        &__container-result{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                padding: 24px;
+                background-color: $color-dark-background;
+                border-radius: 10px;
+        }
+        &__result{
+                display: grid;
+                grid-template-columns: repeat(2,auto);
+                column-gap: 10px;
+                justify-content: space-between;
+                align-items: center;
+        }
 }

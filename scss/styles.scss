@@ -1,5 +1,7 @@
 //ABSTRACT
 @import "./abstract/variables";
+@import "./abstract/functions";
+@import "./abstract/mixins";
 
 //BASE
 @import "./base/resets";
@@ -7,3 +9,9 @@
 //LAYOUT
 @import "./layout/mains";
 @import "./layout/forms";
+
+//COMPONENTS
+@import "./components/buttons";
+@import "./components/inputs";
+@import "./components/labels";
+@import "./components/result-numbers";

@@ -1,0 +1,33 @@
+/*************************************\
+        $INPUT
+\*************************************/
+%input {
+    width: 100%;
+  padding: 5px;
+  border: none;
+  border-radius: 2px;
+  position: relative;
+  background-color: $color-lite-grayish-cyan-transparent;
+  outline: none;
+  &::placeholder {
+      text-align: right;
+      font-family: $font-principal;
+      font-weight: 700;
+      color: rgba($color-dark-grayish-cyan, 0.7);
+    }
+    &::before {
+        content: "./../assets/icon/icon-dollar.svg";
+        display: block;
+        position: absolute;
+        color: rgba($color-dark-grayish-cyan, 0.7);
+    }
+}
+
+.input--loan{
+    @extend %input;
+    margin-bottom: 20px;
+}
+
+.input--time{
+    @extend %input;
+}

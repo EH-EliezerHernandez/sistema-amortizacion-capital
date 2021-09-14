@@ -5,5 +5,12 @@
   display: flex;
   align-items: center;
   flex-direction: column;
+  height: 100vh;
   background-color: $color-lite-grayish-cyan-solid;
+  &__tittle{
+    margin-top: 100px;
+    font-weight: 400;
+    @include font-size(30px);
+    color: rgba($color-dark-background,.8);
+  }
 }

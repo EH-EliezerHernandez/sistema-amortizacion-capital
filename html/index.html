@@ -16,29 +16,35 @@
   </head>
   <body>
     <main class="main">
-      <h1>Sistema de Amortizacion Capital</h1>
+      <h1 class="main__tittle">Sistema de Amortizacion Capital</h1>
       <form action="" class="form-calculator">
         <div class="form-calculator__container-capture">
-          <label for="loan">Loan</label>
-          <input type="Number" class="form-calculator__input-loan" id="loan" />
+          <label for="loan" class="label--capture">Loan</label>
+          <input type="Number" class="input--loan" id="loan" placeholder="0" />
 
-          <p>Select Tip %</p>
+          <p class="label--capture">Select Tip %</p>
           <div class="form-calculator__container-button">
             <button type="button" class="button--dark">5%</button>
             <button type="button" class="button--dark">10%</button>
             <button type="button" class="button--dark">15%</button>
             <button type="button" class="button--dark">25%</button>
             <button type="button" class="button--dark">50%</button>
-            <button type="button" class="button--custom">Custom%</button>
+            <button type="button" class="button--custom">Custom</button>
           </div>
-          <label for="time">Time</label>
-          <input type="Number" />
+          <label for="time" class="label--capture">Time</label>
+          <input type="Number" class="input--time" placeholder="0" />
         </div>
         <div class="form-calculator__container-result">
-          <div class="form-calculator__result"></div>
-          <button type="reset">Reset</button>
+          <div class="form-calculator__result">
+              <h2 class="label--result">full payment</h2>
+              <p class="result-number">$0.00</p>
+              <h2 class="label--result">cuota mensual</h2>
+              <p class="result-number">$0.00</p>
+              <h2 class="label--result">Interest</h2>
+              <p class="result-number">$0.00</p>
+          </div>
+          <button type="reset" class="button--reset">Reset</button>
         </div>
-        <div></div>
       </form>
     </main>
   </body>

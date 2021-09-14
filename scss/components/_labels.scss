@@ -1,0 +1,16 @@
+/*************************************\
+        $LABELS
+\*************************************/
+%label {
+  display: block;
+  @include font-size(12px);
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+}
+.label--capture{
+  @extend %label;
+}
+.label--result{
+  @extend %label;
+  color: $color-lite-grayish-cyan-transparent;
+}
