@@ -24,18 +24,18 @@
 
           <p class="label--capture">Select Tip %</p>
           <div class="form-calculator__container-button">
-            <button type="button" class="button--dark">5%</button>
-            <button type="button" class="button--dark">10%</button>
-            <button type="button" class="button--dark">15%</button>
-            <button type="button" class="button--dark">25%</button>
-            <button type="button" class="button--dark">50%</button>
-            <button type="button" class="button--custom">Custom</button>
+            <button type="button" class="button--dark" id="boton-porcentaje-5">5%</button>
+            <button type="button" class="button--dark" id="boton-porcentaje-10">10%</button>
+            <button type="button" class="button--dark" id="boton-porcentaje-15">15%</button>
+            <button type="button" class="button--dark" id="boton-porcentaje-25">25%</button>
+            <button type="button" class="button--dark" id="boton-porcentaje-40">40%</button>
+            <button type="button" class="button--custom" id="boton-custom">Custom</button>
           </div>
           <label for="time" class="label--capture">Time</label>
-          <input type="Number" class="input--time" placeholder="0" />
+          <input type="Number" class="input--time" id="time" placeholder="0" />
         </div>
         <div class="form-calculator__container-result">
-          <div class="form-calculator__result">
+          <div class="form-calculator__result" id="results">
               <h2 class="label--result">full payment</h2>
               <p class="result-number">$0.00</p>
               <h2 class="label--result">cuota mensual</h2>
@@ -43,7 +43,7 @@
               <h2 class="label--result">Interest</h2>
               <p class="result-number">$0.00</p>
           </div>
-          <button type="reset" class="button--reset">Reset</button>
+          <button type="reset" class="button--reset" id="button-reset">Reset</button>
         </div>
       </form>
     </main>
