@@ -104,9 +104,7 @@ h5 {
   display: grid;
   -ms-grid-columns: auto 10px auto 10px auto 10px auto 10px auto;
   grid-template-columns: repeat(5, auto);
-  -webkit-column-gap: 10px;
-     -moz-column-gap: 10px;
-          column-gap: 10px;
+  gap: 10px;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -211,7 +209,6 @@ h5 {
 
 .label--result {
   text-align: center;
-  white-space: nowrap;
   color: #f4fafa;
 }
 
