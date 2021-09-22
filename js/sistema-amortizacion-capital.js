@@ -21,8 +21,9 @@ function calcularCapitalPendiente(capitalPendiente,amortizacion){
     return nuevoCapitalPendiente;
 }
 function validarCampos(objectPrestamo){
-    const {tipoInteres,amortizacion,cantidadMeses} = objectPrestamo;
-    return tipoInteres != 0 && amortizacion != 0 && cantidadMeses != 0;
+    const {cantidadMeses,tipoInteres,capitalPendiente} = objectPrestamo;
+  
+    return cantidadMeses != 0 && tipoInteres != 0 && capitalPendiente != 0
 }
 function calcularTablaAmortizacion(tipoInteres,capitalPendiente,cantidadMeses){
     const objectAmortizacion = {
@@ -77,32 +78,45 @@ function mostrarResultados(list){
     })
 }
 
-function capturarDatos(buttonPorcent){
+function capturarDatos(tipoInteres){
     const $campoCapitalPendiente = document.querySelector("#loan");
     const $campoCantidadMeses = document.querySelector("#time");
 
     const objectPrestamo = {
         capitalPendiente: $campoCapitalPendiente.value,
         cantidadMeses: $campoCantidadMeses.value,
-        tipoInteres: buttonPorcent,
+        tipoInteres: tipoInteres,
     };
-    console.log(objectPrestamo);
+    
     return objectPrestamo;
 }
 
 function validarCampo(value){
-    return value === "";
+    return value === 0;
 }
 
 function alertCampo(target){
     const value = target.value;
     if(validarCampo(value)){
-        target.style.border = "1px solid green";
+        target.style.borderBottom = "1px solid green";
     }else{
-        target.style.border = "1px solid red";
+        target.style.borderBottom = "1px solid red";
     }
 }
 
+function selectingCampo(target){
+    
+}
+function habilitarBoton(btn){
+    btn.disable = false;
+    btn.classList.remove("disable");
+    btn.classList.add("habilited");
+}
+function disableBoton(btn){
+    btn.disable = true;
+    btn.classList.remove("habilited");
+    btn.classList.add("disable");
+}
 function callEvents(){
     const $form = document.querySelector("#form");
     let objectPrestamo = {
@@ -110,9 +124,43 @@ function callEvents(){
         capitalPendiente: 0,
         amortizacion: 0,
     };
-    let buttonPorcent = 0;
+    
+    $form.addEventListener("change",(evt) => {
+        const target = evt.target;
+        if(target.id  === "loan" || target.id === "time"){
+            const $btnReset = document.querySelector("#button-reset");
+            objectPrestamo = capturarDatos(objectPrestamo.tipoInteres);
+            habilitarBoton($btnReset);
+            if(validarCampos(objectPrestamo)){
+                const btnCalcular = document.querySelector(".button--calcular");
+                habilitarBoton(btnCalcular);
+            }
+        }
+    });
 
-    mostrarResultados([{
+    $form.addEventListener("click",evt =>{
+        const target = evt.target;
+        if(target.classList[0] === "button--calcular"){ 
+            const {capitalPendiente, tipoInteres, cantidadMeses} = objectPrestamo;
+            const listAmortizacion = calcularTablaAmortizacion(tipoInteres,capitalPendiente,cantidadMeses);
+            mostrarResultados(listAmortizacion);
+        }else{
+            if(target.classList[0] === "button-porcent"){
+                const $btnReset = document.querySelector("#button-reset");
+                const porcentajeInteres = target.value;
+                objectPrestamo = capturarDatos(porcentajeInteres);
+                habilitarBoton($btnReset);
+                if(validarCampos(objectPrestamo)){
+                    const btnCalcular = document.querySelector(".button--calcular");
+                    habilitarBoton(btnCalcular);
+                }
+            }
+        } 
+    })
+    
+}
+
+mostrarResultados([{
         ano:0,
         cuotaMensual: 0,
         interes: 0,
@@ -120,37 +168,4 @@ function callEvents(){
         capitalPendiente: 0, 
     }]);
 
-    
-    $form.addEventListener("onkeypress",(evt) => {
-        const target = evt.target;
-        
-        if(target.id === "loan" || target.id === "time"){
-            objectPrestamo = capturarDatos(buttonPorcent);
-            if(validarCampos(objectPrestamo)){
-                let {tipoInteres,capitalPendiente,cantidadMeses} = objectPrestamo;
-                const listAmortizacion = calcularTablaAmortizacion(tipoInteres,capitalPendiente,cantidadMeses);
-                mostrarResultados(listAmortizacion);
-            }
-        }
-    });
-
-    $form.addEventListener("click",evt =>{
-        const target = evt.target;
-        if(target.id === "loan" || target.id === "time"){ 
-            alertCampo(target);
-        }else{
-            if(target.classList[0] === "button-porcent"){
-                buttonPorcent = target.value;
-                objectPrestamo = capturarDatos(buttonPorcent);
-               
-                if(validarCampos(objectPrestamo)){
-                    let {tipoInteres,capitalPendiente,cantidadMeses} = objectPrestamo;
-                    const listAmortizacion = calcularTablaAmortizacion(tipoInteres,capitalPendiente,cantidadMeses);
-                    mostrarResultados(listAmortizacion);
-                }
-            }
-        } 
-    })
-    
-}
 callEvents();

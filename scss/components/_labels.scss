@@ -7,11 +7,13 @@
   color: rgba(0, 0, 0, 0.7);
   font-weight: 400;
 }
-.label--capture {
-  @extend %label;
-}
-.label--result {
-  @extend %label;
-  text-align: center;
-  color: $color-lite-grayish-cyan-transparent;
+.label {
+  &--capture,
+  &--result {
+    @extend %label;
+  }
+  &--result {
+    text-align: center;
+    color: $color-lite-grayish-cyan-transparent;
+  }
 }

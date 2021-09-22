@@ -7,6 +7,27 @@
 /*************************************\
         $MIXINS
 \*************************************/
+.alter-sucesfull {
+  border: 1px solid green;
+}
+
+.alter-error {
+  border: 1px solid red;
+}
+
+.disable {
+  color: rgba(0, 71, 75, 0.4);
+  background-color: #33696c;
+  cursor: not-allowed;
+}
+
+.habilited {
+  cursor: pointer;
+  color: #00474b;
+  background-color: #f5d254;
+  opacity: 1;
+}
+
 /*************************************\
         $RESETS
 \*************************************/
@@ -95,6 +116,7 @@ h5 {
   margin: 10px 0 24px;
 }
 .form-calculator__container-result {
+  margin-top: 20px;
   padding: 24px;
   background-color: #00474b;
   border-radius: 10px;
@@ -116,7 +138,7 @@ h5 {
 /*************************************\
         $BUTTONS
 \*************************************/
-.button--reset, .button--custom, .button--dark {
+.button--dark, .button--custom, .button--calcular, .button--reset {
   padding: 4px;
   border: none;
   font-weight: 700;
@@ -128,28 +150,26 @@ h5 {
   color: rgba(244, 250, 250, 0.9);
   cursor: pointer;
 }
-
 .button--custom {
   cursor: pointer;
   color: #7f9c9f;
   background-color: #f4fafa;
 }
-
+.button--calcular {
+  text-transform: uppercase;
+}
 .button--reset {
   width: 100%;
   margin-top: 20px;
   font-size: 0.875rem;
   line-height: 1.3125rem;
-  color: rgba(0, 71, 75, 0.4);
   text-transform: uppercase;
-  background-color: rgba(127, 156, 159, 0.4);
-  cursor: not-allowed;
 }
 
 /*************************************\
         $INPUT
 \*************************************/
-.input--time, .input--loan {
+.input--loan, .input--time {
   width: 100%;
   margin-bottom: 20px;
   padding: 5px;
@@ -159,47 +179,50 @@ h5 {
   background-color: #f4fafa;
   outline: none;
 }
-.input--time::-webkit-input-placeholder, .input--loan::-webkit-input-placeholder {
+.input--loan::-webkit-input-placeholder, .input--time::-webkit-input-placeholder {
   text-align: right;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: rgba(127, 156, 159, 0.7);
 }
-.input--time::-moz-placeholder, .input--loan::-moz-placeholder {
+.input--loan::-moz-placeholder, .input--time::-moz-placeholder {
   text-align: right;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: rgba(127, 156, 159, 0.7);
 }
-.input--time:-ms-input-placeholder, .input--loan:-ms-input-placeholder {
+.input--loan:-ms-input-placeholder, .input--time:-ms-input-placeholder {
   text-align: right;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: rgba(127, 156, 159, 0.7);
 }
-.input--time::-ms-input-placeholder, .input--loan::-ms-input-placeholder {
+.input--loan::-ms-input-placeholder, .input--time::-ms-input-placeholder {
   text-align: right;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: rgba(127, 156, 159, 0.7);
 }
-.input--time::placeholder, .input--loan::placeholder {
+.input--loan::placeholder, .input--time::placeholder {
   text-align: right;
   font-family: "Space Mono", monospace;
   font-weight: 700;
   color: rgba(127, 156, 159, 0.7);
 }
-.input--time::before, .input--loan::before {
+.input--loan::before, .input--time::before {
   content: "./../assets/icon/icon-dollar.svg";
   display: block;
   position: absolute;
   color: rgba(127, 156, 159, 0.7);
 }
+.input--loan:focus, .input--time:focus {
+  border-bottom: 1px solid blue;
+}
 
 /*************************************\
         $LABELS
 \*************************************/
-.label--result, .label--capture {
+.label--capture, .label--result {
   display: block;
   font-size: 0.75rem;
   line-height: 1.125rem;
