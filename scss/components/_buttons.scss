@@ -14,16 +14,18 @@
   &reset {
     @extend %buttons;
   }
+  /* 
   &dark {
-    background-color: $color-dark-background;
     color: rgba($color-lite-grayish-cyan-transparent, 0.9);
+    background-color: $color-dark-background;
     cursor: pointer;
   }
   &custom {
-    cursor: pointer;
-    color: rgba($color-dark-grayish-cyan, 1);
+    color: $color-dark-grayish-cyan;
     background-color: $color-lite-grayish-cyan-transparent;
+    cursor: pointer;
   }
+  */
   &calcular {
     text-transform: uppercase;
   }
@@ -34,3 +36,13 @@
     text-transform: uppercase;
   }
 }
+@include button(
+  dark,
+  rgba($color-lite-grayish-cyan-transparent, 0.9),
+  $color-dark-background
+);
+@include button(
+  custom,
+  $color-dark-grayish-cyan,
+  $color-lite-grayish-cyan-transparent
+);

@@ -145,15 +145,19 @@ h5 {
   border-radius: 4px;
 }
 
-.button--dark {
-  background-color: #00474b;
-  color: rgba(244, 250, 250, 0.9);
-  cursor: pointer;
-}
-.button--custom {
-  cursor: pointer;
-  color: #7f9c9f;
-  background-color: #f4fafa;
+.button-- {
+  /* 
+  &dark {
+    color: rgba($color-lite-grayish-cyan-transparent, 0.9);
+    background-color: $color-dark-background;
+    cursor: pointer;
+  }
+  &custom {
+    color: $color-dark-grayish-cyan;
+    background-color: $color-lite-grayish-cyan-transparent;
+    cursor: pointer;
+  }
+  */
 }
 .button--calcular {
   text-transform: uppercase;
@@ -164,6 +168,18 @@ h5 {
   font-size: 0.875rem;
   line-height: 1.3125rem;
   text-transform: uppercase;
+}
+
+.button--dark {
+  cursor: pointer;
+  color: #f4fafa;
+  background-color: #00474b;
+}
+
+.button--custom {
+  cursor: pointer;
+  color: #7f9c9f;
+  background-color: #f4fafa;
 }
 
 /*************************************\
