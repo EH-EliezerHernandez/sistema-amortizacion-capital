@@ -7,27 +7,27 @@
   font-weight: 700;
   border-radius: 4px;
 }
-.button {
-  &--dark,
-  &--custom,
-  &--calcular,
-  &--reset {
+.button-- {
+  &dark,
+  &custom,
+  &calcular,
+  &reset {
     @extend %buttons;
   }
-  &--dark {
+  &dark {
     background-color: $color-dark-background;
     color: rgba($color-lite-grayish-cyan-transparent, 0.9);
     cursor: pointer;
   }
-  &--custom {
+  &custom {
     cursor: pointer;
     color: rgba($color-dark-grayish-cyan, 1);
     background-color: $color-lite-grayish-cyan-transparent;
   }
-  &--calcular {
+  &calcular {
     text-transform: uppercase;
   }
-  &--reset {
+  &reset {
     width: 100%;
     margin-top: 20px;
     @include font-size(14px);
