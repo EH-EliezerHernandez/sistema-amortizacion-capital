@@ -6,11 +6,9 @@
   line-height: calcularRem($size-px) * 1.5;
 }
 @mixin button($name, $colorText, $colorBackground) {
-  .button--#{$name} {
+  &#{$name} {
     cursor: pointer;
     color: rgba($colorText, 1);
     background-color: $colorBackground;
   }
 }
-//$color-dark-grayish-cyan
-//$color-lite-grayish-cyan-transparent

@@ -136,13 +136,15 @@ h5 {
 }
 
 /*************************************\
-        $BUTTONS
+$BUTTONS
 \*************************************/
 .button--dark, .button--custom, .button--calcular, .button--reset {
   padding: 4px;
   border: none;
   font-weight: 700;
   border-radius: 4px;
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .button-- {
@@ -159,27 +161,23 @@ h5 {
   }
   */
 }
+.button--dark {
+  cursor: pointer;
+  color: #f4fafa;
+  background-color: #00474b;
+}
+.button--custom {
+  cursor: pointer;
+  color: #7f9c9f;
+  background-color: #f4fafa;
+}
 .button--calcular {
   text-transform: uppercase;
 }
 .button--reset {
   width: 100%;
   margin-top: 20px;
-  font-size: 0.875rem;
-  line-height: 1.3125rem;
   text-transform: uppercase;
-}
-
-.button--dark {
-  cursor: pointer;
-  color: #f4fafa;
-  background-color: #00474b;
-}
-
-.button--custom {
-  cursor: pointer;
-  color: #7f9c9f;
-  background-color: #f4fafa;
 }
 
 /*************************************\
