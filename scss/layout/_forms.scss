@@ -1,36 +1,37 @@
 /*************************************\
         $FORMS
 \*************************************/
-.form-calculator{
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        column-gap: 20px;
-        background-color: $color-white;
-        max-width: 650px;
-        width: 70%;
-        min-width: 300px;
-        margin-top: 50px;
-        padding: 24px 30px;
-        border-radius: 14px;
-        &__container-button{
-                display: grid;
-                grid-template-columns: repeat(3, 1fr);
-                gap: 10px;
-                margin: 10px 0 24px;
-        }
-        &__container-result{
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                padding: 24px;
-                background-color: $color-dark-background;
-                border-radius: 10px;
-        }
-        &__result{
-                display: grid;
-                grid-template-columns: repeat(2,auto);
-                column-gap: 10px;
-                justify-content: space-between;
-                align-items: center;
-        }
+.form-calculator {
+  display: grid;
+  column-gap: 20px;
+  background-color: $color-white;
+  max-width: max-content;
+  width: 70%;
+  min-width: 300px;
+  margin-top: 50px;
+  padding: 24px 30px;
+  border-radius: 14px;
+  &__container-capture {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  &__container-button {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin: 10px 0 24px;
+  }
+  &__container-result {
+    margin-top: 20px;
+    padding: 24px;
+    background-color: $color-dark-background;
+    border-radius: 10px;
+  }
+  &__result {
+    display: grid;
+    grid-template-columns: repeat(5, auto);
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+  }
 }

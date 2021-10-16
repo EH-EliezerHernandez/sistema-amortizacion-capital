@@ -17,35 +17,82 @@
   <body>
     <main class="main">
       <h1 class="main__tittle">Sistema de Amortizacion Capital</h1>
-      <form action="" class="form-calculator">
+      <form action="" class="form-calculator" id="form">
         <div class="form-calculator__container-capture">
           <label for="loan" class="label--capture">Loan</label>
           <input type="Number" class="input--loan" id="loan" placeholder="0" />
 
           <p class="label--capture">Select Tip %</p>
-          <div class="form-calculator__container-button">
-            <button type="button" class="button--dark" id="boton-porcentaje-5">5%</button>
-            <button type="button" class="button--dark" id="boton-porcentaje-10">10%</button>
-            <button type="button" class="button--dark" id="boton-porcentaje-15">15%</button>
-            <button type="button" class="button--dark" id="boton-porcentaje-25">25%</button>
-            <button type="button" class="button--dark" id="boton-porcentaje-40">40%</button>
-            <button type="button" class="button--custom" id="boton-custom">Custom</button>
+          <div class="form-calculator__container-button" id="buttons-porcent">
+            <button
+              type="button"
+              class="button-porcent button--dark"
+              id="boton-porcentaje-5"
+              value="5"
+              ;
+            >
+              5%
+            </button>
+            <button
+              type="button"
+              class="button-porcent button--dark"
+              id="boton-porcentaje-10"
+              value="10"
+              ;
+            >
+              10%
+            </button>
+            <button
+              type="button"
+              class="button-porcent button--dark"
+              id="boton-porcentaje-15"
+              value="15"
+              ;
+            >
+              15%
+            </button>
+            <button
+              type="button"
+              class="button-porcent button--dark"
+              id="boton-porcentaje-25"
+              value="25"
+            >
+              25%
+            </button>
+            <button
+              type="button"
+              class="button-porcent button--dark"
+              id="boton-porcentaje-40"
+              value="40"
+            >
+              40%
+            </button>
+            <button
+              type="button"
+              class="button-porcent button--custom"
+              id="boton-custom"
+            >
+              Custom
+            </button>
           </div>
           <label for="time" class="label--capture">Time</label>
           <input type="Number" class="input--time" id="time" placeholder="0" />
+          <button type="button" class="button--calcular disable">Calcular</button>
         </div>
         <div class="form-calculator__container-result">
           <div class="form-calculator__result" id="results">
-              <h2 class="label--result">full payment</h2>
-              <p class="result-number">$0.00</p>
-              <h2 class="label--result">cuota mensual</h2>
-              <p class="result-number">$0.00</p>
-              <h2 class="label--result">Interest</h2>
-              <p class="result-number">$0.00</p>
+            <p class="label--result">Mes</p>
+            <p class="label--result">Cuota</p>
+            <p class="label--result">Interes</p>
+            <p class="label--result">Amortizacion</p>
+            <p class="label--result">Capital Pendiente</p>
           </div>
-          <button type="reset" class="button--reset" id="button-reset">Reset</button>
+          <button type="reset" class="button--reset disable" id="button-reset">
+            Reset
+          </button>
         </div>
       </form>
     </main>
+    <script src="../js/sistema-amortizacion-capital.js"></script>
   </body>
 </html>

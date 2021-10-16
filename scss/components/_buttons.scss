@@ -1,29 +1,48 @@
 /*************************************\
-        $BUTTONS
+$BUTTONS
 \*************************************/
-%buttons{
-    padding: 4px;
-    border: none;
-    font-weight: 700;
-    border-radius: 4px;
+%buttons {
+  padding: 4px;
+  border: none;
+  font-weight: 700;
+  border-radius: 4px;
+  @include font-size(map-get($font-sizes, normal));
 }
-.button--dark{
+.button-- {
+  &dark,
+  &custom,
+  &calcular,
+  &reset {
+    @extend %buttons;
+  }
+  /* 
+  &dark {
+    color: rgba($color-lite-grayish-cyan-transparent, 0.9);
     background-color: $color-dark-background;
-    color: rgba($color-lite-grayish-cyan-transparent,.9);
     cursor: pointer;
-    @extend %buttons;
-}
-.button--custom{
-    @extend %buttons;
-    cursor: pointer;
-    color: rgba($color-dark-grayish-cyan, 1);
+  }
+  &custom {
+    color: $color-dark-grayish-cyan;
     background-color: $color-lite-grayish-cyan-transparent;
-}
-.button--reset{
-    @extend %buttons;
-    @include font-size(14px);
-    color: rgba($color-dark-background,.4);
+    cursor: pointer;
+  }
+  */
+  @include button(
+    dark,
+    rgba($color-lite-grayish-cyan-transparent, 0.9),
+    $color-dark-background
+  );
+  @include button(
+    custom,
+    $color-dark-grayish-cyan,
+    $color-lite-grayish-cyan-transparent
+  );
+  &calcular {
     text-transform: uppercase;
-    background-color: rgba($color-dark-grayish-cyan,0.4);
-    cursor: not-allowed;
+  }
+  &reset {
+    width: 100%;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
 }

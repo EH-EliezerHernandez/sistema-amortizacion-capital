@@ -1,8 +1,9 @@
 /*************************************\
-        $INPUT
+        $INPUTS
 \*************************************/
 %input {
-    width: 100%;
+  width: 100%;
+  margin-bottom: 20px;
   padding: 5px;
   border: none;
   border-radius: 2px;
@@ -10,24 +11,25 @@
   background-color: $color-lite-grayish-cyan-transparent;
   outline: none;
   &::placeholder {
-      text-align: right;
-      font-family: $font-principal;
-      font-weight: 700;
-      color: rgba($color-dark-grayish-cyan, 0.7);
-    }
-    &::before {
-        content: "./../assets/icon/icon-dollar.svg";
-        display: block;
-        position: absolute;
-        color: rgba($color-dark-grayish-cyan, 0.7);
-    }
+    text-align: right;
+    font-family: $font-principal;
+    font-weight: 700;
+    color: rgba($color-dark-grayish-cyan, 0.7);
+  }
+  &::before {
+    content: "./../assets/icon/icon-dollar.svg";
+    display: block;
+    position: absolute;
+    color: rgba($color-dark-grayish-cyan, 0.7);
+  }
+  &:focus {
+    border-bottom: 1px solid blue;
+  }
 }
 
-.input--loan{
+.input-- {
+  &loan,
+  &time {
     @extend %input;
-    margin-bottom: 20px;
-}
-
-.input--time{
-    @extend %input;
+  }
 }

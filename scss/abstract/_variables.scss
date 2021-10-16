@@ -8,5 +8,25 @@ $color-lite-grayish-cyan-solid: hsl(185, 41%, 84%);
 $color-lite-grayish-cyan-transparent: hsl(189, 41%, 97%);
 $color-white: hsl(0, 0%, 100%);
 
+//COLORS DISABLES
+$color-disable: rgba($color-dark-background, 0.4);
+$color-background-disable: rgb(51 105 108);
+
+//COLOR HABILITED
+$color-habilited: $color-dark-background;
+$color-background-habilited: yellow;
+
+//$COLORS ALERTS
+$color-suscefull: green;
+$color-error: red;
+$color-select: blue;
+
 //$FONTS
 $font-principal: "Space Mono", monospace;
+
+//$FONTS SIZE
+$font-sizes: (
+  small: 12px,
+  normal: 16px,
+  big: 30px,
+);
