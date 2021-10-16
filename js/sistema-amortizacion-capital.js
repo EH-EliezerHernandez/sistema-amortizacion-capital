@@ -73,6 +73,7 @@ function mostrarResultados(list){
             let newElement = document.createElement("P");
             newElement.textContent = element[key];
             newElement.style.textAlign = "center";
+            newElement.classList.add("number--result")
             $results.appendChild(newElement);
         }
     })
